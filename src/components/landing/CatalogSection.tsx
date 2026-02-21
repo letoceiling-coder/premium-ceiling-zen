@@ -1,37 +1,54 @@
 import { useScrollReveal } from "@/hooks/useScrollReveal";
 import { Button } from "@/components/ui/button";
 
+import matteImg from "@/assets/ceilings/matte.jpg";
+import glossyImg from "@/assets/ceilings/glossy.jpg";
+import satinImg from "@/assets/ceilings/satin.jpg";
+import floatingImg from "@/assets/ceilings/floating.jpg";
+import shadowImg from "@/assets/ceilings/shadow.jpg";
+import lightLinesImg from "@/assets/ceilings/light-lines.jpg";
+import trackImg from "@/assets/ceilings/track.jpg";
+import corniceImg from "@/assets/ceilings/cornice.jpg";
+
 const ceilingTypes = [
   {
     title: "Матовый",
+    image: matteImg,
     features: ["Классический вид", "Не требует подкрашивания", "Не боится затоплений"],
   },
   {
     title: "Глянцевый",
+    image: glossyImg,
     features: ["Визуально увеличивает высоту", "Подходит для небольших помещений", "Добавляет лоск"],
   },
   {
     title: "Сатиновый",
+    image: satinImg,
     features: ["Гладкая фактура", "Лёгкий блеск", "Без отражений"],
   },
   {
     title: "Парящий",
+    image: floatingImg,
     features: ["Подсветка по периметру", 'Эффект "парит в воздухе"', "Можно менять цвет"],
   },
   {
     title: "Теневой",
+    image: shadowImg,
     features: ["Теневое примыкание", "Современное решение", "Стильный минимализм"],
   },
   {
     title: "Световые линии",
+    image: lightLinesImg,
     features: ["Оригинальное освещение", "Разные цвета", "Можно как основное освещение"],
   },
   {
     title: "Трековые системы",
+    image: trackImg,
     features: ["Свободное перемещение светильников", "Современный стиль", "Альтернатива люстрам"],
   },
   {
     title: "Системы карнизов",
+    image: corniceImg,
     features: ["Накладные и встроенные", "Скрытая подсветка", "Элегантный вид"],
   },
 ];
@@ -57,9 +74,18 @@ const CatalogSection = () => {
               className="reveal premium-card bg-card rounded-xl overflow-hidden shadow-sm border border-border/50 flex flex-col"
               style={{ transitionDelay: `${i * 0.08}s` }}
             >
-              {/* Placeholder image area */}
-              <div className="h-48 bg-gradient-to-br from-primary/10 via-accent/5 to-secondary flex items-center justify-center">
-                <span className="font-display text-2xl text-primary/40">{item.title}</span>
+              {/* Photo with overlay */}
+              <div className="relative h-48 overflow-hidden">
+                <img
+                  src={item.image}
+                  alt={item.title}
+                  className="w-full h-full object-cover"
+                  loading="lazy"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-foreground/40 via-transparent to-transparent" />
+                <span className="absolute bottom-3 left-4 font-display text-lg font-semibold text-primary-foreground drop-shadow-md">
+                  {item.title}
+                </span>
               </div>
               <div className="p-6 flex flex-col flex-1">
                 <h3 className="font-display text-xl font-semibold text-foreground mb-3">{item.title}</h3>
