@@ -10,20 +10,20 @@ const SalesSection = ({ onOpenForm }: SalesSectionProps) => {
   const ref = useScrollReveal();
 
   return (
-    <section className="py-20 md:py-28 bg-primary text-primary-foreground" ref={ref}>
+    <section className="py-14 md:py-16 bg-primary text-primary-foreground" ref={ref}>
       <div className="max-w-4xl mx-auto px-6 text-center">
         <div className="reveal">
-          <h2 className="font-display text-3xl sm:text-4xl md:text-5xl font-bold mb-6 leading-tight">
+          <h2 className="font-display text-3xl sm:text-4xl md:text-5xl font-bold mb-4 leading-tight">
             Не откладывайте обновление интерьера
           </h2>
-          <p className="font-body text-lg sm:text-xl text-primary-foreground/70 mb-12 leading-relaxed max-w-2xl mx-auto">
+          <p className="font-body text-lg sm:text-xl text-primary-foreground/70 mb-10 leading-relaxed max-w-2xl mx-auto">
             Натяжной потолок устанавливается быстро,
             служит более 20 лет
             и полностью меняет восприятие пространства.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 mb-12">
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 mb-10">
           {[
             { icon: Gift, text: "Бесплатная консультация" },
             { icon: Calculator, text: "Бесплатный расчёт" },

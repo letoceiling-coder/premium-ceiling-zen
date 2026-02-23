@@ -10,7 +10,7 @@ const FinalCTASection = ({ onOpenForm }: FinalCTASectionProps) => {
 
   return (
     <section
-      className="py-20 md:py-28 bg-gradient-to-br from-accent to-primary text-accent-foreground"
+      className="py-14 md:py-16 bg-gradient-to-br from-accent to-primary text-accent-foreground"
       ref={ref}
     >
       <div className="max-w-3xl mx-auto px-6 text-center reveal">
