@@ -16,9 +16,9 @@ const GallerySection = () => {
   const [lightboxImg, setLightboxImg] = useState<string | null>(null);
 
   return (
-    <section className="py-20 md:py-28 bg-background" ref={ref}>
+    <section className="py-14 md:py-16 bg-background" ref={ref}>
       <div className="max-w-6xl mx-auto px-6">
-        <div className="text-center mb-16 reveal">
+        <div className="text-center mb-10 reveal">
           <h2 className="font-display text-3xl sm:text-4xl md:text-5xl font-bold text-foreground mb-4">
             Галерея работ
           </h2>
