@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { useScrollReveal } from "@/hooks/useScrollReveal";
-import { Gift, Calculator, HeadphonesIcon } from "lucide-react";
+import { Gift, Calculator, Headphones } from "lucide-react";
 
 interface SalesSectionProps {
   onOpenForm: () => void;
@@ -27,7 +27,7 @@ const SalesSection = ({ onOpenForm }: SalesSectionProps) => {
           {[
             { icon: Gift, text: "Бесплатная консультация" },
             { icon: Calculator, text: "Бесплатный расчёт" },
-            { icon: HeadphonesIcon, text: "Помощь в подборе решения" },
+            { icon: Headphones, text: "Помощь в подборе решения" },
           ].map((item, i) => (
             <div
               key={item.text}
